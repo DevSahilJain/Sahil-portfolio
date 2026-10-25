@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Daniel:wght@400&family=Moontime&display=swap');
+@import "tailwindcss";
+
+
+
+:root {
+  --background: #1e1e1e;
+  --foreground: #ffffff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+html,
+body {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  font-family: 'Plus Jakarta Sans', var(--font-geist-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-heading {
+  font-family: 'Plus Jakarta Sans', var(--font-geist-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.font-technical {
+  font-family: 'Space Mono', var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.font-signature {
+  font-family: 'Alex Brush', 'Great Vibes', 'Caveat', 'Brush Script MT', cursive;
+}
+
+.font-pixel,
+.font-dotted {
+  font-family: 'DotGothic16', 'Silkscreen', 'Pixelify Sans', 'Space Mono', ui-monospace, monospace;
+}
+
+.font-moontime {
+  font-family: 'Moontime', cursive;
+}
+
+
+

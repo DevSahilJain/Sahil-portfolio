@@ -13,6 +13,7 @@ import { usePageTransition } from "./PageTransition";
 
 const NAV_ITEMS = [
   { label: "HOME", href: "/", id: "nav-home", accent: "#F2B7AA", accentSoft: "rgba(242,183,170,0.18)", accentBorder: "rgba(242,183,170,0.5)" },
+  { label: "ABOUT", href: "/about", id: "nav-about", accent: "#E989FF", accentSoft: "rgba(233,137,255,0.18)", accentBorder: "rgba(233,137,255,0.5)" },
   { label: "SKILLS", href: "/skills", id: "nav-skills", accent: "#BBD4D0", accentSoft: "rgba(187,212,208,0.18)", accentBorder: "rgba(187,212,208,0.5)" },
   { label: "PROJECTS", href: "/projects", id: "nav-projects", accent: "#52748F", accentSoft: "rgba(82,116,143,0.18)", accentBorder: "rgba(82,116,143,0.5)" },
   { label: "CERTIFICATIONS", href: "/certifications", id: "nav-certificates", accent: "#B95F43", accentSoft: "rgba(185,95,67,0.18)", accentBorder: "rgba(185,95,67,0.5)" },

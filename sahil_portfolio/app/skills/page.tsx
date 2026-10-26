@@ -20,9 +20,9 @@ const skills = [
     ),
     color: "#9eff2e",
     items: [
-      { name: "Prompt Engineering", level: 90 },
-      { name: "Loop Engineering", level: 85 },
-      { name: "AI / ML Fundamentals", level: 87 },
+      { name: "Prompt Engineering" },
+      { name: "Loop Engineering" },
+      { name: "AI / ML Fundamentals" },
     ],
   },
   {
@@ -36,9 +36,9 @@ const skills = [
     ),
     color: "#00d4ff",
     items: [
-      { name: "C", level: 88 },
-      { name: "Python", level: 92 },
-      { name: "Web Development", level: 85 },
+      { name: "C" },
+      { name: "Python" },
+      { name: "Web Development" },
     ],
   },
   {
@@ -53,9 +53,9 @@ const skills = [
     ),
     color: "#ff6b9d",
     items: [
-      { name: "Adobe Lightroom", level: 80 },
-      { name: "UX/UI Design", level: 78 },
-      { name: "Autodesk Fusion 360", level: 83 },
+      { name: "Adobe Lightroom" },
+      { name: "UX/UI Design" },
+      { name: "Autodesk Fusion 360" },
     ],
   },
   {
@@ -70,8 +70,8 @@ const skills = [
     ),
     color: "#ffd93d",
     items: [
-      { name: "Supervised Learning", level: 82 },
-      { name: "KNN Regression", level: 75 },
+      { name: "Supervised Learning" },
+      { name: "KNN Regression" },
     ],
   },
 ];
@@ -116,40 +116,9 @@ function SkillCard({ skill, index, groupColor }: { skill: typeof skills[0]["item
       <div className="absolute bottom-0 right-0 w-1/3 h-1 bg-gradient-to-l" style={{ background: `linear-gradient(270deg, ${groupColor}, transparent)` }} />
       
       <div className="p-6 md:p-8 relative z-10">
-        <div className="flex items-center justify-between gap-4 mb-4">
-          <h3 className="font-mono text-lg md:text-xl font-bold leading-tight flex-1">
-            {skill.name}
-          </h3>
-          <span className="font-mono text-sm font-bold whitespace-nowrap px-3 py-1 border-2 border-white bg-zinc-950" style={{ transform: "rotate(1deg)" }}>
-            {skill.level}%
-          </span>
-        </div>
-
-        <div className="relative h-3 bg-zinc-800 border-2 border-white overflow-hidden">
-          <div
-            className="h-full bg-white transition-all duration-1500 ease-out"
-            style={{ width: isVisible ? `${skill.level}%` : "0%" }}
-            role="progressbar"
-            aria-valuenow={skill.level}
-            aria-valuemin={0}
-            aria-valuemax={100}
-            aria-label={`${skill.name} proficiency: ${skill.level}%`}
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-shine" />
-        </div>
-
-        <div className="mt-3 flex items-center justify-between text-xs font-mono text-zinc-500">
-          <span>Novice</span>
-          <span>Expert</span>
-        </div>
-
-        <div className="mt-4 flex gap-2" role="list" aria-label="Skill tags">
-          {["Core", "Active", "Production"].slice(0, Math.ceil(skill.level / 35)).map((tag, i) => (
-            <span key={i} className="px-2 py-0.5 border border-white/30 text-xs font-mono text-zinc-400 hover:text-white hover:border-white transition-colors">
-              {tag}
-            </span>
-          ))}
-        </div>
+        <h3 className="font-mono text-lg md:text-xl font-bold leading-tight">
+          {skill.name}
+        </h3>
       </div>
       <div className="absolute -bottom-3 -right-3 w-16 h-16 bg-zinc-900 border-4 border-white border-t-transparent border-r-transparent transform rotate-3" />
     </article>

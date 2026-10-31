@@ -101,13 +101,6 @@ export default function Projects() {
             <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#ff6b9d] via-[#ffd93d] to-[#9eff2e]" />
 
             <div className="relative z-10 text-left">
-              <p className="font-sans text-lg md:text-xl text-zinc-300 mb-8 leading-relaxed max-w-3xl">
-                This section is actively being built. I am currently working on documenting and showcasing 
-                <span className="font-mono font-bold text-white">hands-on projects</span>, 
-                <span className="font-mono font-bold text-white">hackathon builds</span>, 
-                and <span className="font-mono font-bold text-white">experimental prototypes</span>.
-              </p>
-
               {/* Featured Project: Enviroova */}
               <article
                 className="relative border-4 border-white bg-zinc-950 overflow-hidden transition-all duration-500 hover:shadow-[12px_12px_0px_0px_rgb(255,255,255)] mb-12"
@@ -143,6 +136,31 @@ export default function Projects() {
                         {tag}
                       </span>
                     ))}
+                  </div>
+
+                  <div className="mb-6">
+                    <h4 className="font-mono text-xs text-zinc-500 uppercase tracking-wider mb-3">Contributors</h4>
+                    <div className="flex flex-wrap gap-4 md:gap-6">
+                      {[
+                        { name: "Vedant Jain", url: "https://www.linkedin.com/in/vedant-jain-a89919420?utm_source=share_via&utm_content=profile&utm_medium=member_android" },
+                        { name: "Jeet Kotadiya", url: "https://www.linkedin.com/in/jeet-kotadiya-47b426444?utm_source=share_via&utm_content=profile&utm_medium=member_android" },
+                        { name: "Kislay Agrawal", url: "https://www.linkedin.com/in/kislay-agrawal-198786416?utm_source=share_via&utm_content=profile&utm_medium=member_android" },
+                      ].map((contributor) => (
+                        <a
+                          key={contributor.name}
+                          href={contributor.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 px-4 py-2 border-2 border-white/30 bg-zinc-900 hover:bg-white hover:text-black transition-all duration-300 font-mono text-sm relative overflow-hidden group"
+                        >
+                          <span className="relative z-10">{contributor.name}</span>
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="relative z-10">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                          </svg>
+                          <div className="absolute inset-0 bg-white scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-300" />
+                        </a>
+                      ))}
+                    </div>
                   </div>
 
                   <a

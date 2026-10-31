@@ -102,11 +102,67 @@ export default function Projects() {
 
             <div className="relative z-10 text-left">
               <p className="font-sans text-lg md:text-xl text-zinc-300 mb-8 leading-relaxed max-w-3xl">
-                This section is actively being built. I'm currently working on documenting and showcasing 
+                This section is actively being built. I am currently working on documenting and showcasing 
                 <span className="font-mono font-bold text-white">hands-on projects</span>, 
                 <span className="font-mono font-bold text-white">hackathon builds</span>, 
                 and <span className="font-mono font-bold text-white">experimental prototypes</span>.
               </p>
+
+              {/* Featured Project: Enviroova */}
+              <article
+                className="relative border-4 border-white bg-zinc-950 overflow-hidden transition-all duration-500 hover:shadow-[12px_12px_0px_0px_rgb(255,255,255)] mb-12"
+                style={{ transform: "rotate(-0.3deg)" }}
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r" style={{ background: "linear-gradient(90deg, #9eff2e, transparent)" }} />
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-l" style={{ background: "linear-gradient(270deg, #00d4ff, transparent)" }} />
+
+                <div className="p-8 md:p-10 relative z-10">
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="px-3 py-1 border-2 border-white text-xs font-mono uppercase tracking-wider flex items-center gap-1.5" style={{ color: "#9eff2e", borderColor: "#9eff2e" }}>
+                      <span style={{ color: "#9eff2e" }}>🌱</span>
+                      Side Project
+                    </span>
+                    <span className="font-mono text-xs text-zinc-500 ml-auto px-2 py-1 border border-white/30" style={{ transform: "rotate(1deg)" }}>
+                      2026
+                    </span>
+                  </div>
+
+                  <h3 className="font-mono text-2xl md:text-3xl font-bold mb-4 leading-tight text-white">
+                    Enviroova
+                  </h3>
+                  <p className="text-zinc-300 text-base md:text-lg mb-6 leading-relaxed">
+                    Campus energy sustainability dashboard that tracks energy usage, cost, and carbon footprint across university buildings. Built with real-time data visualization and tariff-based payback calculations.
+                  </p>
+
+                  <div className="flex flex-wrap gap-3 mb-6">
+                    {["Next.js", "TypeScript", "Tailwind CSS", "Recharts", "Vercel"].map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-3 py-1 border border-white/30 bg-zinc-900 font-mono text-xs rounded"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <a
+                    href="https://ecoloop-vkv5-3gch2gurm-devsahiljain.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-6 py-3 border-4 border-[#9eff2e] bg-transparent hover:bg-[#9eff2e] hover:text-black transition-all duration-300 font-mono text-sm md:text-base font-bold relative overflow-hidden group"
+                  >
+                    <span className="relative z-10">Live Demo ↗</span>
+                    <div className="absolute inset-0 bg-[#9eff2e] scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-300" />
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="relative z-10">
+                      <line x1="18" y1="13" x2="12" y2="7" />
+                      <line x1="12" y1="7" x2="6" y2="13" />
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    </svg>
+                  </a>
+                </div>
+                <div className="absolute -bottom-3 -right-3 w-16 h-16 bg-zinc-900 border-4 border-white border-t-transparent border-r-transparent transform rotate-3" style={{ borderColor: "#9eff2e" }} />
+                <div className="absolute -top-3 -left-3 w-12 h-12 bg-zinc-900 border-4 border-white border-b-transparent border-l-transparent transform -rotate-3 opacity-50" style={{ borderColor: "#00d4ff" }} />
+              </article>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 {[
@@ -128,7 +184,7 @@ export default function Projects() {
               </div>
 
               <div className="flex flex-wrap justify-center gap-3 mb-8">
-                {["React/Next.js", "Python/AI", "Rust/WASM", "Docker/K8s", "Three.js/WebGL", "LLM Apps"].map((tag, i) => (
+                {["React/Next.js", "Python/AI", "Rust/WASM", "Docker/K8s", "Three.js/WebGL", "LLM Apps"].map((tag) => (
                   <span
                     key={tag}
                     className="px-4 py-2 border-2 border-white/30 bg-transparent font-mono text-xs hover:bg-white/10 hover:border-white transition-all duration-300 relative overflow-hidden group/item"

@@ -138,6 +138,15 @@ export default function Projects() {
                     ))}
                   </div>
 
+                  {/* Project Logo */}
+                  <div className="mb-6 flex justify-center">
+                    <img
+                      src="/images/enviroova.jpg"
+                      alt="Enviroova logo"
+                      className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover border-4 border-white/20 shadow-[0_0_25px_rgba(158,255,46,0.35)] transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+
                   <div className="mb-6">
                     <h4 className="font-mono text-xs text-zinc-500 uppercase tracking-wider mb-3">Contributors</h4>
                     <div className="flex flex-wrap gap-4 md:gap-6">

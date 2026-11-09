@@ -52,14 +52,6 @@ export default function Projects() {
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-6 text-center py-20">
         <div className="max-w-4xl w-full">
           <div className="mb-12 relative">
-            <div className="inline-flex items-center gap-3 px-6 py-3 border-4 border-white bg-zinc-950 mb-8" style={{ transform: "rotate(-1deg)" }}>
-              <div className="flex items-center gap-2">
-                <div className="w-3 h-3 rounded-full bg-yellow-500 animate-pulse" />
-                <span className="font-mono text-xs text-zinc-400 uppercase tracking-wider">Building</span>
-              </div>
-              <span className="font-mono text-xs text-zinc-500 ml-4">{progress}%</span>
-            </div>
-
             <h1 className="font-mono text-5xl md:text-7xl lg:text-9xl font-bold tracking-tight border-b-4 border-white pb-4 inline-block relative">
               Projects
             </h1>

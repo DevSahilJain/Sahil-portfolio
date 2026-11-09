@@ -854,8 +854,7 @@ function ResumeButton() {
   const [isHovered, setIsHovered] = useState(false);
   const isNavigatingRef = useRef(false);
 
-  // Replace with your actual resume URL
-  const resumeUrl = "#";
+  const resumeUrl = "/resume.docx";
 
   const handleMouseDown = () => {
     isNavigatingRef.current = true;

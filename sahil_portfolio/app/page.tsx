@@ -855,7 +855,6 @@ function ResumeButton() {
   const isNavigatingRef = useRef(false);
 
   const resumeUrl = "/resume.docx";
-  const resumeViewerUrl = `https://view.officeapps.live.com/op/view.aspx?src=${encodeURIComponent(window.location.origin + resumeUrl)}`;
 
   const handleMouseDown = () => {
     isNavigatingRef.current = true;
@@ -867,7 +866,7 @@ function ResumeButton() {
 
   return (
     <a
-      href={resumeViewerUrl}
+      href={resumeUrl}
       target="_blank"
       rel="noopener noreferrer"
       onMouseDown={handleMouseDown}

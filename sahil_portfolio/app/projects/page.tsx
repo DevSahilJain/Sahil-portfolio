@@ -1,28 +1,11 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Sidebar from "@/app/components/Sidebar";
 import ScrollIndicator from "@/app/components/ScrollIndicator";
 import { TransitionLink } from "@/app/components/PageTransition";
 
 export default function Projects() {
-  const [progress, setProgress] = useState(0);
-  const [dots, setDots] = useState("");
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setProgress((p) => (p + 1) % 101);
-    }, 80);
-
-    const dotInterval = setInterval(() => {
-      setDots((d) => (d.length >= 3 ? "" : d + "."));
-    }, 500);
-
-    return () => {
-      clearInterval(interval);
-      clearInterval(dotInterval);
-    };
-  }, []);
 
   return (
     <main className="relative w-screen min-h-screen bg-[#1f1f1f] text-white flex flex-col items-center select-none overflow-y-auto">
@@ -78,21 +61,8 @@ export default function Projects() {
             </div>
 
             <h1 className="font-mono text-5xl md:text-7xl lg:text-9xl font-bold tracking-tight border-b-4 border-white pb-4 inline-block relative">
-              Under Construction
-              <span className="absolute bottom-[-2px] right-[-60px] font-mono text-xs text-zinc-500 opacity-70 animate-blink">{dots}</span>
+              Projects
             </h1>
-
-            <div className="mt-8 flex items-center justify-center gap-4">
-              <div className="w-64 h-1.5 bg-zinc-800 border-2 border-white rounded overflow-hidden relative">
-                <div
-                  className="h-full bg-gradient-to-r from-[#9eff2e] via-[#00d4ff] to-[#ff6b9d] transition-all duration-300 ease-out"
-                  style={{ width: `${progress}%` }}
-                />
-              </div>
-              <span className="font-mono text-sm text-zinc-400 whitespace-nowrap">
-                {progress}% Complete
-              </span>
-            </div>
           </div>
 
           <div className="bg-zinc-900 border-4 border-white p-8 md:p-12 mb-12 relative overflow-hidden group">
